@@ -6,6 +6,21 @@ html
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag "application", "data-turbo-track": "reload"
-    = javascript_importmap_tags
+    = javascript_importmap_tags 'application'
+    = render 'layouts/shim'
   body
-    = yield
+    = render 'layouts/header'
+    header.navbar.navbar-fixed-top.navbar-inverse
+      .container
+        = link_to "sample app", '#', id: "logo"
+        nav
+          ul.nav.navbar-nav.navbar-right
+            li
+              = link_to "Home",   '#'
+            li
+              = link_to "Help",   '#'
+            li
+              = link_to "Log in", '#'
+    .container
+      = yield
+      = render 'layouts/footer'
