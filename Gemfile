@@ -45,9 +45,8 @@ gem "bootsnap", require: false
 # Use Sass to process CSS
 gem "sassc-rails"
 gem 'slim-rails'
-gem 'webpacker',  '4.0.7'
-gem 'turbolinks', '5.2.0'
-
+gem 'webpacker'
+gem 'minitest'
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
@@ -75,9 +74,4 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
-  gem 'rails-controller-testing'
-  gem 'minitest',                 '5.16.3'
-  gem 'minitest-reporters'
-  gem 'guard'
-  gem 'guard-minitest'
 end
